@@ -1,0 +1,15 @@
+.home-page {
+    min-height: 100vh;
+}
+
+/* Ensure proper spacing between sections */
+.home-page>* {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-page {
+        padding-top: 0;
+    }
+}

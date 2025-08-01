@@ -1,0 +1,127 @@
+.brands-page {
+    padding: 2rem 0;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.brand-card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.brand-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.brand-logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.brand-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.brand-card:hover .brand-logo img {
+    filter: grayscale(0%);
+}
+
+.brand-content {
+    text-align: center;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.75rem;
+}
+
+.brand-description {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.brand-stats {
+    display: flex;
+    justify-content: center;
+}
+
+.product-count {
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    background: rgba(255, 108, 47, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .brands-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .brands-page {
+        padding: 1rem 0;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .brand-card {
+        padding: 1.5rem;
+    }
+
+    .brand-logo {
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .brand-name {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-card {
+        padding: 1rem;
+    }
+
+    .brand-logo {
+        height: 50px;
+    }
+
+    .brand-name {
+        font-size: 1.125rem;
+    }
+}
